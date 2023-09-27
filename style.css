@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.text {
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(201, 210, 222);
+}
+
+.title {
+    font-size: 28px;
+}
+
+.body{
+    background-color: rgb(40, 49, 61);
+}
+.game_wrapper {
+    margin: auto;
+    padding: 100px 20px 0;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game_title {
+    margin-bottom: 50px;
+}
+.game_header {
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+.game_turn {
+}
+.game_playground {
+    width: 272px;
+    height: 272px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 1px;
+    overflow: auto;
+}
+.playground_cell {
+    background-color: rgb(61, 73, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playground_row1_col1 {
+}
+.playground_row1_col2 {
+}
+.playground_row1_col3 {
+}
+.playground_row2_col1 {
+}
+.playground_row2_col2 {
+}
+.playground_row2_col3 {
+}
+.playground_row3_col1 {
+}
+.playground_row3_col2 {
+}
+.playground_row3_col3 {
+}
+.game_button {
+}
+.button {
+}
+.button_restart {
+}
