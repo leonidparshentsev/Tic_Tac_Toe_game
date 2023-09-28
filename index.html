@@ -10,29 +10,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
-    <div class="game_wrapper text">
-        <p class="game_title title">TIC TAC TOE</p>
-        <div class="game_header">
-            <p class="game_turn">Current turn:
-                <span class="game_turn__span"></span>
+    <div class="game__wrapper">
+        <h1 class="game__title title text">TIC TAC TOE</h1>
+        <div class="game__header">
+            <p class="game__turn text">
+                <span class="turn__span_mark"></span>
+                <span class="turn__span_text">TURN</span>
             </p>
         </div>
-        <div class="game_playground">
-            <div class="playground_cell playground_row1_col1"></div>
-            <div class="playground_cell playground_row1_col2"></div>
-            <div class="playground_cell playground_row1_col3"></div>
-            <div class="playground_cell playground_row2_col1"></div>
-            <div class="playground_cell playground_row2_col2"></div>
-            <div class="playground_cell playground_row2_col3"></div>
-            <div class="playground_cell playground_row3_col1"></div>
-            <div class="playground_cell playground_row3_col2"></div>
-            <div class="playground_cell playground_row3_col3"></div>
+        <div class="game__playground mark_text text">
+            <div class="playground__cell playground__row1_col1"></div>
+            <div class="playground__cell playground__row1_col2"></div>
+            <div class="playground__cell playground__row1_col3"></div>
+            <div class="playground__cell playground__row2_col1"></div>
+            <div class="playground__cell playground__row2_col2"></div>
+            <div class="playground__cell playground__row2_col3"></div>
+            <div class="playground__cell playground__row3_col1"></div>
+            <div class="playground__cell playground__row3_col2"></div>
+            <div class="playground__cell playground__row3_col3"></div>
         </div>
-        <div class="game_button button">
-            <p class="button_restart text">RESTART</p>
+        <button class="game__restart_button button">
+            <p class="restart_button__text text">RESTART</p>
+        </button>
+        <div class="game__menu">
+            <div class="menu__wrapper">
+                <h2 class="menu__title title_menu title text">Select first player mark:</h2>
+                <div class="menu__select_wrapper text">
+                    <div class="select__x select_button button active">
+                        <div class="x__title mark_text">X</div>
+                    </div>
+                    <div class="select__o select_button button">
+                        <div class="o__title mark_text">O</div>
+                    </div>
+                </div>
+                <p class="menu__text text">*X GOES FIRST</p>
+            </div>
+            <div class="menu__start start_button button pvp_button">
+                <div class="pvp_start__text text">NEW GAME (VS PLAYER)</div>
+            </div>
+            <div class="menu__start start_button button cpu_button inactive">
+                <div class="cpu_start__text text">NEW GAME (VS CPU)</div>
+            </div>
         </div>
-        
+    </div>
+    <div class="winner__wrapper hidden">
+        <div class="winner__screen">
+            <h2 class="winner__title title_menu text">
+                <span class="winner__title_mark mark_text"></span>
+                <span class="winner__title_text">TAKES THE ROUND</span>
+            </h2>
+            <button class="winner__button button">
+                <p class="restart_button__text text">PLAY AGAIN</p>
+            </button>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="firstPlayerSelect.js"></script>
+    <script src="gameStart.js"></script>
 </body>
 </html>

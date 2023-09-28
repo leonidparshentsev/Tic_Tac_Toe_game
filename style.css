@@ -1,24 +1,48 @@
+:root {
+    --primary_bg: rgb(40, 49, 61);
+    --secondary_bg: rgb(61, 73, 88);
+    --primary_text: rgb(201, 210, 222);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: none;
+    border: none;
+    cursor: default;
 }
 
 .text {
     font-family: 'Red Hat Text', sans-serif;
     font-weight: 700;
     font-size: 16px;
-    color: rgb(201, 210, 222);
+    color: var(--primary_text);
+    cursor: inherit;
+}
+
+.mark_text {
+    font-size: 46px;
+    cursor: inherit;
 }
 
 .title {
+    margin-bottom: 50px;
     font-size: 28px;
+    text-align: center;
+}
+
+.title_menu {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .body{
-    background-color: rgb(40, 49, 61);
+    background-color: var(--primary_bg);
 }
-.game_wrapper {
+.game__wrapper {
+    position: relative;
     margin: auto;
     padding: 100px 20px 0;
     width: 310px;
@@ -26,16 +50,26 @@
     flex-direction: column;
     align-items: center;
 }
-.game_title {
-    margin-bottom: 50px;
+.game__title {
 }
-.game_header {
-    align-self: flex-start;
-    margin-bottom: 50px;
+.game__header {
+    margin-bottom: 20px;
 }
-.game_turn {
+.game__turn{
+    padding: 8px 16px;
+    background-color: var(--secondary_bg);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
 }
-.game_playground {
+.turn__span_mark {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.turn__span_text {
+    font-size: 14px;
+}
+.game__playground {
     width: 272px;
     height: 272px;
     margin-bottom: 50px;
@@ -46,33 +80,155 @@
     gap: 1px;
     overflow: auto;
 }
-.playground_cell {
-    background-color: rgb(61, 73, 88);
+.playground__cell {
+    background-color: var(--secondary_bg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.playground_row1_col1 {
+.playground__cell.winner_state {
+    background-color: var(--primary_text);
+    color: var(--primary_bg);
+    transition: background-color 0.3s linear;
 }
-.playground_row1_col2 {
+.playground__row1_col1 {
 }
-.playground_row1_col3 {
+.playground__row1_col2 {
 }
-.playground_row2_col1 {
+.playground__row1_col3 {
 }
-.playground_row2_col2 {
+.playground__row2_col1 {
 }
-.playground_row2_col3 {
+.playground__row2_col2 {
 }
-.playground_row3_col1 {
+.playground__row2_col3 {
 }
-.playground_row3_col2 {
+.playground__row3_col1 {
 }
-.playground_row3_col3 {
+.playground__row3_col2 {
 }
-.game_button {
+.playground__row3_col3 {
 }
+.game__restart_button {
+}
+.playground__cell:hover,
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover { 
+    background-color: hsl(213, 18%, 39%);
+}
+
+.button:active {
+    background-color: hsl(213, 18%, 49%);
+}
+
 .button {
+    margin-bottom: 20px;
+    background-color: var(--secondary_bg);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 8px 24px;
+    letter-spacing: 1px;
 }
-.button_restart {
+.restart_button__text {
+}
+
+.game__menu {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary_bg);
+}
+
+.menu__wrapper {
+    padding: 30px 20px 20px;
+    background-color: var(--secondary_bg);
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.menu__select_wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary_bg);
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.menu__text {
+    text-align: center;
+}
+
+.select_button {
+    padding: 6px 24px;
+    margin-bottom: 0px;
+    border-radius: 18px;
+    flex: 1 0;
+    text-align: center;
+    background-color: var(--primary_bg);
+}
+
+.select_button.active {
+    transition: background-color 0.3s linear;
+    color: var(--primary_bg);
+    background-color: var(--primary_text);
+}
+
+.select__x {
+}
+.x__title {
+}
+.select__o {
+}
+.o__title {
+}
+
+.menu__start.inactive {
+    background-color: hsl(213, 5%, 29%);
+}
+.start_button {
+    padding: 16px 24px;
+}
+.pvp_start__text {
+}
+.cpu_start__text {
+}
+
+.winner__wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 49, 61, 0.8);
+}
+.winner__wrapper.hidden {
+    display: none;
+}
+
+.winner__screen {
+    width: 100%;
+    padding: 30px 0 10px;
+    background-color: var(--secondary_bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.winner__title {
+    display: flex;
+    align-items: center;
+}
+.winner__title_mark {
+    margin-right: 10px;
+}
+
+.winner__button {
+    background-color: var(--primary_bg);
 }
