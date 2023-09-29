@@ -1,3 +1,5 @@
+import { updateScores } from "./updateScore.js";
+
 const playGround = document.querySelector('.game__playground');
 const currentTurnSpan = document.querySelector('.turn__span_mark');
 const mainScreenRestartButton = document.querySelector('.game__restart_button');
@@ -6,6 +8,7 @@ const winnerRestartButton = document.querySelector('.winner__button');
 let playGroundArr = [[], [], []];
 let steps = 0;
 let turn = true;
+
 showCurrentTurn(turn);
 
 mainScreenRestartButton.addEventListener('click', doRestart);
@@ -87,7 +90,7 @@ function doRestart() {
     <div class="playground__cell playground__row3_col1"></div>
     <div class="playground__cell playground__row3_col2"></div>
     <div class="playground__cell playground__row3_col3"></div>`
-    
+
     playGroundArr = [[], [], []];
     turn = true;
     steps = 0;
@@ -119,6 +122,7 @@ function showWinnerScreen(winnerMark) {
         winnerTitleText.innerHTML = 'NO ONE TAKES THE ROUND';
         setTimeout(() => winnerScreenWrapper.classList.remove('hidden'), 100);
     }
+    updateScores(winnerMark);
 }
 
 function showCurrentTurn(turn) {

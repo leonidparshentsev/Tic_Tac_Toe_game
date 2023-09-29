@@ -15,7 +15,7 @@
         <div class="game__header">
             <p class="game__turn text">
                 <span class="turn__span_mark"></span>
-                <span class="turn__span_text">TURN</span>
+                <span class="turn__span_text secondary_text">TURN</span>
             </p>
         </div>
         <div class="game__playground mark_text text">
@@ -28,6 +28,20 @@
             <div class="playground__cell playground__row3_col1"></div>
             <div class="playground__cell playground__row3_col2"></div>
             <div class="playground__cell playground__row3_col3"></div>
+        </div>
+        <div class="game__scores">
+            <div class="scores scores_x">
+                <p class="scores__text text secondary_text">X:</p>
+                <p class="scores__point point_x text"></p>
+            </div>
+            <div class="scores scores_both">
+                <p class="scores__text text secondary_text">Rounds:</p>
+                <p class="scores__point point_both text"></p>
+            </div>
+            <div class="scores scores_o">
+                <p class="scores__text text secondary_text">O:</p>
+                <p class="scores__point point_o text"></p>
+            </div>
         </div>
         <button class="game__restart_button button">
             <p class="restart_button__text text">RESTART</p>
@@ -64,7 +78,8 @@
             </button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="updateScore.js"></script>
     <script src="firstPlayerSelect.js"></script>
     <script src="gameStart.js"></script>
 </body>
