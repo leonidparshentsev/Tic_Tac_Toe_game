@@ -1,3 +1,5 @@
+// Функция обновляющая текущую статистику количества игр и побед.
+
 const scoreXOutput = document.querySelector('.point_x');
 const scoreOOutput = document.querySelector('.point_o');
 const scoreBothOutput = document.querySelector('.point_both');
@@ -5,8 +7,6 @@ const scoreBothOutput = document.querySelector('.point_both');
 let scoreX = 0;
 let scoreO = 0;
 let scoreBoth = 0;
-
-
 
 if(localStorage.getItem('scoreX') && localStorage.getItem('scoreO')) {
     scoreX = localStorage.getItem('scoreX');
@@ -16,16 +16,13 @@ if(localStorage.getItem('scoreX') && localStorage.getItem('scoreO')) {
     localStorage.setItem('scoreX', 0);
     localStorage.setItem('scoreO', 0);
     localStorage.setItem('scoreBoth', 0);
-    // scoreX = 0;
-    // scoreO = 0;
-    // scoreBoth = 0;
 }
 
 updateOutputScores();
 
 export function updateScores(mark) {
     if(mark !== null) {
-        if(mark === 1) {
+        if(mark === 'X') {
             scoreX++;
             localStorage.setItem('scoreX', scoreX);
         } else {
