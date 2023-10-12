@@ -30,4 +30,4 @@
 
 ### Links
 
-You can check out the resource on the [`link`](https://leonidparshentsev.github.io/Tic_Tac_Toe_game/).
+You can check out the result on the [`link`](https://leonidparshentsev.github.io/Tic_Tac_Toe_game/).
